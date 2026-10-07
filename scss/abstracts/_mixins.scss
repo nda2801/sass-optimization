@@ -1,0 +1,21 @@
+@use 'variables' as *;
+
+// Mixin hỗ trợ linh hoạt thay đổi màu nền, bo góc và màu chữ
+@mixin button-style($bg-color: $primary-color, $text: $white-color, $radius: $radius-sm) {
+  background-color: $bg-color;
+  color: $text;
+  padding: $padding-button;
+  border-radius: $radius;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+// Mixin dựng khung card/hộp nội dung
+@mixin box-style($bg: $white-color, $padding: $padding-card, $radius: $radius-md) {
+  background-color: $bg;
+  padding: $padding;
+  border-radius: $radius;
+  box-shadow: $box-shadow-default;
+}
